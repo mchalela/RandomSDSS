@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+
+recursive-include data *.md
+recursive-include data *.ply
+
+exclude tox.ini
+exclude pyproject.toml
+exclude test_*.py
