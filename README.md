@@ -1,9 +1,11 @@
 
 # Random SDSS
 
+[![PyPI version](https://badge.fury.io/py/RandomSDSS.svg)](https://badge.fury.io/py/RandomSDSS)
 [![RandomSDSS](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml/badge.svg)](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/mchalela/RandomSDSS/badge.svg?branch=main)](https://coveralls.io/github/mchalela/RandomSDSS?branch=main)
 [![Documentation Status](https://readthedocs.org/projects/randomsdss/badge/?version=latest)](https://randomsdss.readthedocs.io/en/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Generate random points in SDSS DR8 to DR16 footprints.
 
