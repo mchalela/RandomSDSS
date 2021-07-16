@@ -47,7 +47,6 @@ Basic Usage
    plt.scatter(ra, dec, s=1)
    plt.xlabel('RA [deg]')
    plt.ylabel('DEC [deg]')
-   plt.show()
 
 .. image:: _static/example.png
    :scale: 100 %
@@ -58,18 +57,13 @@ instantiate an object using:
 
 .. code-block:: python
 
-   import randomsdss
-
    ra, dec = randomsdss.sky_random(dr="DR12", catalog="BOSS", size=10_000)
-
 
 If you also need a random redshift distribution you can provide a sample
 of redshifts and a random set will be generated from the underlying 
 Probability Density Function (PDF):
 
 .. code-block:: python
-
-   import randomsdss
 
    z = randomsdss.z_random(z_array, size=10_000)
 
@@ -92,10 +86,3 @@ https://github.com/mchalela/RandomSDSS
    randomsdss
    installation
    licence   
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
