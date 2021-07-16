@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# This file is part of the RandomSDSS Project
+# https://github.com/mchalela/RandomSDSS
+# Copyright (c) 2021, Martin Chalela
+# License: MIT
+# Full Text: https://github.com/mchalela/RandomSDSS/LICENSE
+
+# =============================================================================
+# IMPORTS
+# =============================================================================
+
 import os
 import pathlib
 from unittest.mock import patch
