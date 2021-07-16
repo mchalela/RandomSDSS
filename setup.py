@@ -42,6 +42,7 @@ with open(PATH / "README.md") as fp:
 
 DESCRIPTION = "Generate random points within SDSS DR8 to DR16 footprint."
 
+VERSION = "0.1"
 
 # =============================================================================
 # FUNCTIONS
@@ -51,7 +52,7 @@ DESCRIPTION = "Generate random points within SDSS DR8 to DR16 footprint."
 def do_setup():
     setup(
         name="RandomSDSS",
-        version="0.1.0",
+        version=VERSION,
         description=DESCRIPTION,
         long_description=open("README.md").read(),
         long_description_content_type="text/markdown",
