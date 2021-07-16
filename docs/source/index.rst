@@ -71,7 +71,7 @@ https://github.com/mchalela/SnakeJazz
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   randomsdss
    installation
    licence   
 
