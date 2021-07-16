@@ -7,7 +7,7 @@
 [![Documentation Status](https://readthedocs.org/projects/randomsdss/badge/?version=latest)](https://randomsdss.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Generate random points in SDSS DR8 to DR16 footprints.
+Generate random points in the Sloan Digital Sky Survey (SDSS) DR8 to DR16 footprints.
 
 This is a small wrapper around the package pymangle that facilitates
 the creation of random points in the SDSS fields. I included 
