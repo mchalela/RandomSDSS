@@ -127,7 +127,7 @@ def polygon_path(dr, catalog):
 
 
 def get_polygon(dr, catalog):
-    """Return polygon path.
+    """Return pymangle polygon object.
 
     Parameters
     ----------
@@ -156,7 +156,7 @@ def get_polygon(dr, catalog):
 # Base class for all Data Releases
 @attr.s
 class DR:
-    """Return polygon path.
+    """Base Data Release class.
 
     Parameters
     ----------
