@@ -320,7 +320,7 @@ def _random_from_pdf(pdf, x_grid, size, seed=None):
 
 
 def z_random(z, size=10_000, weights=None, seed=None):
-    """Generate random redshift values following the input redshift distribution.
+    """Generate random redshift values following the input distribution.
 
     This function uses scipy.stats.gaussian_kde to compute the Probability
     Density Distribution (PDF).
