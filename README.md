@@ -23,12 +23,10 @@ import randomsdss
 dr12 = randomsdss.DR12(catalog="BOSS")
 ra, dec = dr12.random(size=10_000)
 
-
 plt.figure()
 plt.scatter(ra, dec, s=1)
 plt.xlabel('RA [deg]')
 plt.ylabel('DEC [deg]')
-plt.show()
 ```
 
 <p align="center">
@@ -39,8 +37,6 @@ Alternatively you can get the same result without the need to
 instantiate an object using:
 
 ```python
-import randomsdss
-
 ra, dec = randomsdss.sky_random(dr="DR12", catalog="BOSS", size=10_000)
 ```
 
@@ -49,8 +45,6 @@ of redshifts and a random set will be generated from the underlying
 Probability Density Function (PDF):
 
 ```python
-import randomsdss
-
 z = randomsdss.z_random(z_array, size=10_000)
 ```
 
