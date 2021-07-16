@@ -10,7 +10,7 @@ Generate random points in SDSS DR8 to DR16 footprints.
 
 This is a small wrapper around the package pymangle that facilitates
 the creation of random points in the SDSS fields. I included 
-SDSS polygons for its diferent data releases (DR8 to DR16).
+SDSS polygons for its different data releases (DR8 to DR16).
 
 
 Basic Usage
@@ -30,12 +30,11 @@ Basic Usage
    plt.ylabel('DEC [deg]')
    plt.show()
 
-
 .. image:: _static/example.png
    :scale: 100 %
 
 
-Alternatively you can get the same result without the need to 
+Alternatively, you can get the same result without the need to 
 instantiate an object using:
 
 .. code-block:: python
@@ -55,8 +54,8 @@ Probability Density Function (PDF):
 
    z = randomsdss.z_random(z_array, size=10_000)
 
-The z_random is a complementary function since does not use any information 
-regarding the SDSS catalogs, only the provided redshift array. 
+The z_random is a complementary function since it does not use any 
+information regarding the SDSS catalogs, only the provided redshift array. 
 
 | **Author**
 | Martin Chalela (E-mail: tinchochalela@gmail.com)
@@ -65,7 +64,7 @@ regarding the SDSS catalogs, only the provided redshift array.
 Repository and Issues
 ---------------------
 
-https://github.com/mchalela/SnakeJazz
+https://github.com/mchalela/RandomSDSS
 
 .. toctree::
    :maxdepth: 2
