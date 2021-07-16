@@ -6,6 +6,10 @@
 RandomSDSS's documentation!
 ======================================
 
+.. image:: https://badge.fury.io/py/RandomSDSS.svg
+    :target: https://badge.fury.io/py/RandomSDSS
+    :alt: PyPI
+    
 .. image:: https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml/badge.svg
    :target: https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml
    :alt: Build Status
@@ -17,6 +21,9 @@ RandomSDSS's documentation!
 .. image:: https://coveralls.io/repos/github/mchalela/RandomSDSS/badge.svg?branch=main
    :target: https://coveralls.io/github/mchalela/RandomSDSS?branch=main
 
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+   :target: https://tldrlegal.com/license/mit-license
+   :alt: License
 
 Generate random points in SDSS DR8 to DR16 footprints.
 
