@@ -42,7 +42,7 @@ with open(PATH / "README.md") as fp:
 
 DESCRIPTION = "Generate random points within SDSS DR8 to DR16 footprint."
 
-VERSION = "0.1"
+VERSION = "0.2"
 
 # =============================================================================
 # FUNCTIONS
