@@ -13,7 +13,7 @@
 
 import os
 import pathlib
-from unittest.mock import patch
+from unittest.mock import PropertyMock, patch
 
 import numpy as np
 
@@ -158,7 +158,6 @@ def test_get_polygon_error():
 
 @pytest.mark.parametrize("release", range(8, 17))
 def test_sky_random(release):
-
     dr_obj = DRX[release]("SDSS")
     ra, dec = randomsdss.sky_random(dr=f"DR{release}", catalog="SDSS", size=9)
     assert len(ra) == 9
@@ -167,7 +166,6 @@ def test_sky_random(release):
 
 
 def test_z_random():
-
     rng = np.random.default_rng(seed=42)
     z_dist = rng.normal(0.5, 0.1, size=5_000)
     mask = z_dist > 0.4
@@ -177,3 +175,57 @@ def test_z_random():
 
     assert len(z_rand == 1_000)
     assert np.all(z_rand > 0.4)
+
+
+# ============================================================================
+# TEST WRAP OF PYMANGLE
+# ============================================================================
+
+
+def test_DR_sky_random():
+    with patch.object(Mangle, "genrand") as method:
+        dr16 = DR16()
+        dr16.sky_random(1)
+        method.assert_called_once_with(1)
+
+
+def test_DR_contains():
+    with patch.object(Mangle, "contains") as method:
+        dr16 = DR16()
+        dr16.contains(0.0, 0.0)
+        method.assert_called_once_with(0.0, 0.0)
+
+
+def test_DR_polyid_and_weight():
+    with patch.object(Mangle, "polyid_and_weight") as method:
+        dr16 = DR16()
+        dr16.polyid_and_weight(0.0, 0.0)
+        method.assert_called_once_with(0.0, 0.0)
+
+
+def test_DR_polyid():
+    with patch.object(Mangle, "polyid") as method:
+        dr16 = DR16()
+        dr16.polyid(0.0, 0.0)
+        method.assert_called_once_with(0.0, 0.0)
+
+
+def test_DR_weight():
+    with patch.object(Mangle, "weight") as method:
+        dr16 = DR16()
+        dr16.weight(0.0, 0.0)
+        method.assert_called_once_with(0.0, 0.0)
+
+
+def test_DR_area():
+    with patch.object(Mangle, "area", new_callable=PropertyMock) as method:
+        dr16 = DR16()
+        dr16.area
+        method.assert_called_once()
+
+
+def test_DR_weights():
+    with patch.object(Mangle, "weights", new_callable=PropertyMock) as method:
+        dr16 = DR16()
+        dr16.weights
+        method.assert_called_once()

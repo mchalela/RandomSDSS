@@ -173,7 +173,17 @@ class DR:
         """Call get_polygon here to ensure self is instantiated."""
         self.mangle_ = get_polygon(self.dr, self.catalog)
 
-    def random(self, size):
+    @property
+    def area(self):
+        """Area of the catalog."""
+        return self.mangle_.area
+
+    @property
+    def weights(self):
+        """Array of polygons weights."""
+        return self.mangle_.weights
+
+    def sky_random(self, size):
         """Generate random RA, DEC points.
 
         Parameters
@@ -189,6 +199,76 @@ class DR:
             Declination in degrees.
         """
         return self.mangle_.genrand(size)
+
+    def contains(self, ra, dec):
+        """Check if point is inside the catalog area.
+
+        Parameters
+        ----------
+        ra: numpy.ndarray
+            Right Ascension in degrees.
+        dec: numpy.ndarray
+            Declination in degrees.
+
+        Returns
+        -------
+        bool:
+            True if inside, False otherwise.
+        """
+        return self.mangle_.contains(ra, dec)
+
+    def polyid_and_weight(self, ra, dec):
+        """Get polygon id and weight of input point.
+
+        Parameters
+        ----------
+        ra: numpy.ndarray
+            Right Ascension in degrees.
+        dec: numpy.ndarray
+            Declination in degrees.
+
+        Returns
+        -------
+        pid: numpy.ndarray
+            Polygon id. -1 if outside of catalog area.
+        weight: numpy.ndarray
+            Poligon weight. 0 if outside of catalog area.
+        """
+        return self.mangle_.polyid_and_weight(ra, dec)
+
+    def polyid(self, ra, dec):
+        """Get polygon id of input point.
+
+        Parameters
+        ----------
+        ra: numpy.ndarray
+            Right Ascension in degrees.
+        dec: numpy.ndarray
+            Declination in degrees.
+
+        Returns
+        -------
+        pid: numpy.ndarray
+            Polygon id. -1 if outside of catalog area.
+        """
+        return self.mangle_.polyid(ra, dec)
+
+    def weight(self, ra, dec):
+        """Get polygon weight of input point.
+
+        Parameters
+        ----------
+        ra: numpy.ndarray
+            Right Ascension in degrees.
+        dec: numpy.ndarray
+            Declination in degrees.
+
+        Returns
+        -------
+        weight: numpy.ndarray
+            Poligon weight. 0 if outside of catalog area.
+        """
+        return self.mangle_.weight(ra, dec)
 
 
 # One class for each Data Relese
@@ -288,5 +368,5 @@ def sky_random(dr="DR16", catalog="SDSS", size=10_000):
         Declination in degrees.
     """
     ply = DR(dr=dr, catalog=catalog)
-    ra, dec = ply.random(size)
+    ra, dec = ply.sky_random(size)
     return ra, dec
