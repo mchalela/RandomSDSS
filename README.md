@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import randomsdss
 
 dr12 = randomsdss.DR12(catalog="BOSS")
-ra, dec = dr12.random(size=10_000)
+ra, dec = dr12.sky_random(size=10_000)
 
 plt.figure()
 plt.scatter(ra, dec, s=1)
