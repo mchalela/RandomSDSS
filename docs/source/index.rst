@@ -6,6 +6,18 @@
 RandomSDSS's documentation!
 ======================================
 
+.. image:: https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml/badge.svg
+   :target: https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml
+   :alt: Build Status
+   
+.. image:: https://readthedocs.org/projects/randomsdss/badge/?version=latest
+   :target: https://randomsdss.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://coveralls.io/repos/github/mchalela/RandomSDSS/badge.svg?branch=main
+   :target: https://coveralls.io/github/mchalela/RandomSDSS?branch=main
+
+
 Generate random points in SDSS DR8 to DR16 footprints.
 
 This is a small wrapper around the package pymangle that facilitates

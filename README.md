@@ -1,6 +1,10 @@
 
 # Random SDSS
 
+[![RandomSDSS](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml/badge.svg)](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/mchalela/RandomSDSS/badge.svg?branch=main)](https://coveralls.io/github/mchalela/RandomSDSS?branch=main)
+[![Documentation Status](https://readthedocs.org/projects/randomsdss/badge/?version=latest)](https://randomsdss.readthedocs.io/en/latest/?badge=latest)
+
 Generate random points in SDSS DR8 to DR16 footprints.
 
 This is a small wrapper around the package pymangle that facilitates
