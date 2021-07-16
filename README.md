@@ -26,7 +26,7 @@ plt.show()
 ```
 
 <p align="center">
-    <img src="docs/_statc/example.png" alt="DR12 example">
+    <img src="https://github.com/mchalela/RandomSDSS/blob/main/docs/source/_static/example.png" alt="DR12 example">
 </p>
 
 Alternatively you can get the same result without the need to 
