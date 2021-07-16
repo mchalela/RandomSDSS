@@ -3,7 +3,10 @@ include LICENSE
 
 recursive-include data *.md
 recursive-include data *.ply
+recursive-include docs/source/_static *.png
 
 exclude tox.ini
 exclude pyproject.toml
 exclude test_*.py
+
+recursive-exclude docs *
