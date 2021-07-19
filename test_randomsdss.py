@@ -30,7 +30,7 @@ from randomsdss import DR, DR10, DR11, DR12, DR13, DR14, DR15, DR16, DR8, DR9
 
 PATH = os.path.abspath(os.path.dirname(__file__))
 
-DR_PATH = pathlib.Path(PATH) / "data"
+DR_PATH = pathlib.Path(PATH) / "randomsdss" / "data"
 
 DRX = {
     8: DR8,

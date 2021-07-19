@@ -8,16 +8,16 @@
 # Full Text: https://github.com/mchalela/RandomSDSS/LICENSE
 
 
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # DOCS
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """Distribution and installation of RandomSDSS."""
 
 
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # IMPORTS
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import os
 import pathlib
@@ -28,9 +28,9 @@ from setuptools import setup
 
 use_setuptools()
 
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # CONSTANTS
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 REQUIREMENTS = ["attrs", "pymangle", "scipy"]
 
@@ -39,19 +39,22 @@ PATH = pathlib.Path(os.path.abspath(os.path.dirname(__file__)))
 with open(PATH / "README.md") as fp:
     LONG_DESCRIPTION = fp.read()
 
+with open(PATH / "randomsdss" / "__init__.py") as fp:
+    for line in fp.readlines():
+        if line.startswith("__version__ = "):
+            VERSION = line.split("=", 1)[-1].replace('"', "").strip()
+            break
 
 DESCRIPTION = "Generate random points within SDSS DR8 to DR16 footprint."
 
-VERSION = "0.2"
-
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # FUNCTIONS
-# =============================================================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 def do_setup():
     setup(
-        name="RandomSDSS",
+        name="randomsdss",
         version=VERSION,
         description=DESCRIPTION,
         long_description=open("README.md").read(),
@@ -59,7 +62,8 @@ def do_setup():
         author=["Martin Chalela"],
         author_email="tinchochalela@gmail.com",
         url="https://github.com/mchalela/RandomSDSS",
-        py_modules=["randomsdss", "ez_setup"],
+        py_modules=["ez_setup"],
+        packages=["randomsdss", "randomsdss.data"],
         license="MIT",
         keywords=["random", "sdss", "sky", "pymangle", "mangle"],
         classifiers=[
