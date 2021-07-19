@@ -32,7 +32,7 @@ use_setuptools()
 # CONSTANTS
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-REQUIREMENTS = ["attrs", "pymangle", "scipy"]
+REQUIREMENTS = ["attrs", "numpy", "pymangle", "scipy"]
 
 PATH = pathlib.Path(os.path.abspath(os.path.dirname(__file__)))
 
