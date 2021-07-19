@@ -2,8 +2,8 @@ include README.md
 include LICENSE
 
 recursive-include randomsdss *.md
-recursive-include randomsdss *.ply
 recursive-include docs/source/_static *.png
+recursive-include randomsdss/data *.ply
 
 exclude tox.ini
 exclude pyproject.toml
