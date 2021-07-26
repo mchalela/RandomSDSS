@@ -63,7 +63,11 @@ def do_setup():
         author_email="tinchochalela@gmail.com",
         url="https://github.com/mchalela/RandomSDSS",
         py_modules=["ez_setup"],
-        packages=["randomsdss", "randomsdss.data"],
+        packages=[
+            "randomsdss",
+            "randomsdss.data",
+        ],
+        include_package_data=True,
         license="MIT",
         keywords=["random", "sdss", "sky", "pymangle", "mangle"],
         classifiers=[
