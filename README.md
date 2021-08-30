@@ -9,7 +9,7 @@
 
 Generate random points in the Sloan Digital Sky Survey (SDSS) DR8 to DR16 footprints.
 
-This is a small wrapper around the package pymangle that facilitates
+This is a small wrapper around the package [pymangle](https://github.com/esheldon/pymangle) that facilitates
 the creation of random points in the SDSS fields. I included 
 SDSS polygons for its diferent data releases (DR8 to DR16).
 
@@ -48,8 +48,8 @@ Probability Density Function (PDF):
 z = randomsdss.z_random(z_array, size=10_000)
 ```
 
-The z_random is a complementary function since does not use any information 
-regarding the SDSS catalogs, only the provided redshift array.
+The z_random is a complementary function since it doesn't use any information 
+from the SDSS catalogs, only the provided redshift array.
 
 
 ### Author
