@@ -229,3 +229,30 @@ def test_DR_weights():
         dr16 = DR16()
         dr16.weights
         method.assert_called_once()
+
+
+def test_DR_npoly():
+    with patch.object(Mangle, "npoly", new_callable=PropertyMock) as method:
+        dr16 = DR16()
+        dr16.npoly
+        method.assert_called_once()
+
+
+def test_DR_set_weights_value():
+    with patch.object(Mangle, "weights", new_callable=PropertyMock) as method:
+        dr16 = DR16()
+        w = 0.5
+        dr16.set_weights(w)
+
+        expected = w * np.ones(dr16.npoly).reshape((1, -1))
+        np.testing.assert_array_equal(expected, method.call_args[0])
+
+
+def test_DR_set_weights_array():
+    with patch.object(Mangle, "weights", new_callable=PropertyMock) as method:
+        dr16 = DR16()
+        w = 0.8 * np.ones(dr16.npoly)
+        dr16.set_weights(w)
+
+        expected = w.reshape((1, -1))
+        np.testing.assert_array_equal(expected, method.call_args[0])
