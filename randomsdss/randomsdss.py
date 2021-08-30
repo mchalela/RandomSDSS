@@ -133,13 +133,30 @@ class DR:
 
     @property
     def area(self):
-        """Area of the catalog."""
+        """Get the area of the catalog."""
         return self.mangle_.area
+
+    @property
+    def npoly(self):
+        """Get the number of polygons."""
+        return self.mangle_.npoly
 
     @property
     def weights(self):
         """Array of polygons weights."""
         return self.mangle_.weights
+
+    def set_weights(self, weights):
+        """Set new weights for polygons.
+
+        Parameters
+        ----------
+        weight: float or numpy.ndarray
+            Poligons weights.
+        """
+        if np.size(weights) == 1:
+            weights = np.full(self.npoly, weights)
+        self.mangle_.weights = weights
 
     def sky_random(self, size):
         """Generate random RA, DEC points.
