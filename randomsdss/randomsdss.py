@@ -175,6 +175,33 @@ class DR:
         """
         return self.mangle_.genrand(size)
 
+    def box_random(self, ra_min, ra_max, dec_min, dec_max, size):
+        """Generate random RA, DEC points within a box.
+
+        Parameters
+        ----------
+        ra_min: float
+            Right Ascension lower bound in degrees.
+        ra_max: float
+            Right Ascension upper bound in degrees.
+        dec_min: float
+            Declination lower bound in degrees.
+        dec_max: float
+            Declination upper bound in degrees.
+        size: int
+            Number of random points to generate.
+
+        Returns
+        -------
+        ra: numpy.ndarray
+            Right Ascension in degrees.
+        dec: numpy.ndarray
+            Declination in degrees.
+        """
+        return self.mangle_.genrand_range(
+            size, ra_min, ra_max, dec_min, dec_max
+        )
+
     def contains(self, ra, dec):
         """Check if point is inside the catalog area.
 

@@ -189,6 +189,14 @@ def test_DR_sky_random():
         method.assert_called_once_with(1)
 
 
+def test_DR_box_random():
+    with patch.object(Mangle, "genrand_range") as method:
+        dr16 = DR16()
+        dr16.box_random(150.0, 200.0, 20, 30, size=10)
+        # in pymangle size is the first parameter
+        method.assert_called_once_with(10, 150.0, 200.0, 20, 30)
+
+
 def test_DR_contains():
     with patch.object(Mangle, "contains") as method:
         dr16 = DR16()
