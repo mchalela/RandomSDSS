@@ -51,7 +51,7 @@ DRX = {
 
 def test_DR_invalid():
     with pytest.raises(ValueError):
-        DR(dr="DR5", catalog="SDSS")
+        DR(dr="DR5", catalog ="SDSS")
 
 
 @pytest.mark.parametrize("release", range(8, 17))
