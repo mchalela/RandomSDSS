@@ -1,5 +1,5 @@
 
-# RandomSDSS
+# Random SDSS
 
 [![PyPI version](https://badge.fury.io/py/RandomSDSS.svg)](https://badge.fury.io/py/RandomSDSS)
 [![RandomSDSS](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml/badge.svg)](https://github.com/mchalela/RandomSDSS/actions/workflows/randomSDSS_ci.yml)
