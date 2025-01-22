@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you found this software useful, please cite it as follows. :)"
+authors:
+  - family-names: Chalela
+    given-names: Martin
+    orcid: https://orcid.org/0000-0002-9143-7974
+title: "RandomSDSS"
+version: 0.5.0
+date-released: "2021-09-10"
+url: "https://github.com/mchalela/RandomSDSS"
+license: "MIT"
